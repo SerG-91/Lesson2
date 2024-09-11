@@ -10,5 +10,3 @@ def test_product_init_2(product2):
     assert product2.description == "512GB, Gray space"
     assert product2.price == 210000.0
     assert product2.quantity == 8
-
-
