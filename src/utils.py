@@ -33,5 +33,5 @@ if __name__ == "__main__":
     path_json = os.path.join(DATA_PATH, "products.json")
     product_list = read_json(path_json)
     category_data = create_object_from_json(product_list)
-    print(category_data[0].name)
-    print(category_data[0].products[0].name)
+    print(category_data[1].name)
+    print(category_data[1].products[0].name)
