@@ -15,6 +15,18 @@ def product2():
 
 
 @pytest.fixture
+def product3():
+    product3 = {
+            "name": "Samsung Galaxy S23 Ultra",
+            "description": "256GB, Серый цвет, 200MP камера",
+            "price": 180000.0,
+            "quantity": 5,
+        }
+
+    return product3
+
+
+@pytest.fixture
 def category1():
     return Category(
         name="Смартфоны",

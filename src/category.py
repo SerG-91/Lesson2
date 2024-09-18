@@ -21,7 +21,7 @@ class Category:
 
     @property
     def get_product(self):
-        """Геттер для получения продуктов"""
+        """Геттер для получения списка продуктов"""
         return self.__products
 
     @property

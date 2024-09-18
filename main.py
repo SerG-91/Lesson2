@@ -36,14 +36,22 @@ if __name__ == "__main__":
     category2 = Category("Телевизоры",
                          "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
                          [product4])
-    print(category1.get_product)
+    # print(category1.get_product)
+    # print(category1.product_list)
+    # category1.add_product(product4)
+    # print(category1.product_list)
+    product7 = Product.new_product({'name': "55 QLED 4K",
+                                    'description': "Фоновая подсветка",
+                                    'price': 123000.0,
+                                    'quantity': 7})
+    print(product7.description)
 
-    category1.add_product(product4)
-    print(category1.product_list)
+    # product7.price = 10000
+    # print(product7.price)
 
     # print(category2.name)
     # print(category2.description)
-    # print(len(category2.products))
+    # print(len(category2.products))y
     # print(category2.products)
     #
     # print(Category.category_count)
