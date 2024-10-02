@@ -14,6 +14,9 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products) if products else []
 
+    def __str__(self):
+        return f"{self.name}, Количество продуктов: {len(self.__products)} шт"
+
     def add_product(self, new_product):
         """Метод добавления продукта в приватный список продуктов"""
         self.__products.append(new_product)
@@ -22,6 +25,10 @@ class Category:
     @property
     def get_product(self):
         """Геттер для получения списка продуктов"""
+        # products_list = []
+        # for product in self.__products:
+        #     products_list.append(product)
+        # return products_list
         return self.__products
 
     @property
@@ -33,3 +40,8 @@ class Category:
                 f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
             )
         return product_str
+
+
+# result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
+#                                "для удобства жизни", ["product1", "product2", "product3"])
+# print(result)
