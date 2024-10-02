@@ -13,8 +13,8 @@ class Iterator:
         return self
 
     def __next__(self):
-        if self.index < len(category1.get_product):
-            prod = category1.get_product[self.index]
+        if self.index < len(self.category.get_product):
+            prod = self.category.get_product[self.index]
             self.index += 1
             return prod
         else:

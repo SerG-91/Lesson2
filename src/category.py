@@ -42,6 +42,6 @@ class Category:
         return product_str
 
 
-# result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
-#                                "для удобства жизни", ["product1", "product2", "product3"])
-# print(result)
+result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
+                               "для удобства жизни", ["product1", "product2", "product3"])
+print(result)
