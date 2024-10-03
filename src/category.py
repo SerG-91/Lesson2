@@ -23,18 +23,14 @@ class Category:
     @property
     def get_product(self):
         """Геттер для получения списка продуктов"""
-        # products_list = []
-        # for product in self.__products:
-        #     products_list.append(product)
-        # return products_list
         return self.__products
 
     def add_product(self, new_product):
         """Метод добавления продукта в приватный список продуктов"""
         if isinstance(new_product, Product):
-            self.__products.append(new_product)
+            self.get_product.append(new_product)
             Category.product_count += 1
-        raise TypeError
+
 
     @property
     def product_list(self):
