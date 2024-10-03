@@ -13,6 +13,3 @@ def test_add_product(category1, product3):
 
 def test_str_print(category1):
     assert str(category1) == "Смартфоны, Количество продуктов: 2 шт"
-
-
-

@@ -15,7 +15,7 @@ class Category:
         Category.product_count += len(products) if products else []
 
     def __str__(self):
-        return f"{self.name}, Количество продуктов: {len(self.__products)} шт"
+        return f"{self.name}, количество продуктов: {Category.product_count} шт."
 
     def add_product(self, new_product):
         """Метод добавления продукта в приватный список продуктов"""
@@ -44,4 +44,4 @@ class Category:
 
 result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
                                "для удобства жизни", ["product1", "product2", "product3"])
-print(result)
+print(str(result))
