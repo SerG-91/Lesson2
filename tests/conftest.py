@@ -2,6 +2,8 @@ import pytest
 
 from src.product import Product
 from src.category import Category
+from src.smartphone import Smartphone
+from src.lawnGrass import LawnGrass
 
 
 @pytest.fixture
@@ -15,9 +17,14 @@ def product2():
 
 
 @pytest.fixture
+def product5():
+    return Product("Iphone", "512GB, Gray space", 31000.0, 14)
+
+
+@pytest.fixture
 def product3():
     product3 = {
-            "name": "Samsung Galaxy S23 Ultra",
+            "name": "Samsung Galaxy Ultra",
             "description": "256GB, Серый цвет, 200MP камера",
             "price": 180000.0,
             "quantity": 5,
@@ -37,3 +44,13 @@ def category1():
             Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
         ]
     )
+
+
+@pytest.fixture
+def smartphone1():
+    return Smartphone("Sumsung", "Description", 5000, 5, "Efficiency", "Model", 36, "red")
+
+
+@pytest.fixture
+def smartphone2():
+    return Smartphone("Iphone", "Description", 4000, 5, "Efficiency", "Model", 36, "red")

@@ -21,7 +21,7 @@ class Smartphone(Product):
 
 if __name__ == "__main__":
     smart1 = Smartphone("Sumsung", "Description", 5000, 5, "Efficiency", "ST4", 36, "red")
-    smart2 = Smartphone("Iphon", "Description", 5000, 5, "Efficiency", "ST4", 36, "red")
+    smart2 = Smartphone("Iphon", "Description", 4000, 5, "Efficiency", "ST4", 36, "red")
 
     low = LawnGrass("444444rdfs", "Description", 5000, 5, "Efficiency", "ST4", "red")
-    print(smart1 + low)
+    print(smart1 + smart2)

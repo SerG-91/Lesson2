@@ -17,7 +17,7 @@ def test_product_init_2(product2):
 
 def test_new_product(product3):
     product = Product.new_product(product3)
-    assert product.name == "Samsung Galaxy S23 Ultra"
+    assert product.name == "Samsung Galaxy Ultra"
 
 
 def test_add_product(product1, product2):

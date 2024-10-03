@@ -18,14 +18,7 @@ class Category:
         Category.product_count += len(products) if products else []
 
     def __str__(self):
-        return f"{self.name}, количество продуктов: {Category.product_count} шт."
-
-    def add_product(self, new_product):
-        """Метод добавления продукта в приватный список продуктов"""
-        if isinstance(new_product, Product):
-            self.__products.append(new_product)
-            Category.product_count += 1
-        raise TypeError
+        return f"{self.name}, количество продуктов: {len(self.__products)} шт."
 
     @property
     def get_product(self):
@@ -35,6 +28,13 @@ class Category:
         #     products_list.append(product)
         # return products_list
         return self.__products
+
+    def add_product(self, new_product):
+        """Метод добавления продукта в приватный список продуктов"""
+        if isinstance(new_product, Product):
+            self.__products.append(new_product)
+            Category.product_count += 1
+        raise TypeError
 
     @property
     def product_list(self):
@@ -46,7 +46,6 @@ class Category:
             )
         return product_str
 
-
-result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
-                               "для удобства жизни", ["product1", "product2", "product3"])
-print(str(result))
+# result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
+#                                "для удобства жизни", ["product1", "product2", "product3"])
+# print(str(result))
