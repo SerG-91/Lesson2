@@ -9,4 +9,7 @@ class LawnGrass(Product):
         self.germination_period = germination_period
         self.color = color
 
-
+    def __add__(self, other):
+        if type(other) is LawnGrass:
+            return self.quantity * self.price + other.quantity * other.price
+        raise TypeError
