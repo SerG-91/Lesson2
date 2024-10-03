@@ -54,3 +54,13 @@ def smartphone1():
 @pytest.fixture
 def smartphone2():
     return Smartphone("Iphone", "Description", 4000, 5, "Efficiency", "Model", 36, "red")
+
+
+@pytest.fixture
+def lawn_grass1():
+    return LawnGrass("Газон-1", "Description", 3000, 2, "Country", "GerminationPeriod", "Red")
+
+
+@pytest.fixture
+def lawn_grass2():
+    return LawnGrass("Газон-22", "Description", 6000, 3, "Country", "GerminationPeriod", "Red")
