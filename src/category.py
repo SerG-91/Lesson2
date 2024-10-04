@@ -1,3 +1,6 @@
+from src.product import Product
+
+
 class Category:
     """Класс описания продуктов"""
     name: str
@@ -15,7 +18,11 @@ class Category:
         Category.product_count += len(products) if products else []
 
     def __str__(self):
-        return f"{self.name}, количество продуктов: {Category.product_count} шт."
+        counter = 0
+        for product in self.__products:
+            counter += product.quantity
+        return f"{self.name}, количество продуктов: {counter} шт.\n"
+        # return f"{self.name}, количество продуктов: {len(self.__products)} шт."
 
     def add_product(self, new_product):
         """Метод добавления продукта в приватный список продуктов"""
@@ -42,6 +49,10 @@ class Category:
         return product_str
 
 
+product_1 = Product("Samsung Galaxy C23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+product_2 = Product("Iphone 15", "512GB, Gray space", 31000.0, 14)
 result = Category("Смартфоны", "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
-                               "для удобства жизни", ["product1", "product2", "product3"])
+                               "для удобства жизни", [product_1, product_2])
+
+
 print(str(result))

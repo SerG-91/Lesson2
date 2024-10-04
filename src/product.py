@@ -56,6 +56,6 @@ class Product:
 
 product_1 = Product("Samsung Galaxy C23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
 product_2 = Product("Iphone 15", "512GB, Gray space", 31000.0, 14)
-print(product_1)
-print(product_2)
-print(product_1 + product_2)
+# print(product_1)
+# print(product_2)
+# print(product_1 + product_2)
