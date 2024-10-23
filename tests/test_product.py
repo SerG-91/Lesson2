@@ -1,4 +1,6 @@
-from src.product import Product
+from src.lawnGrass import LawnGrass
+from src.product import Product, Mixin, BaseProduct
+from src.smartphone import Smartphone
 
 
 def test_product_init(product1):
@@ -26,3 +28,10 @@ def test_add_product(product1, product2):
 
 def test_str_product(product1):
     assert str(product1) == "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт"
+
+
+def test_classes():
+    assert Smartphone.__mro__[1:] == LawnGrass.__mro__[1:]
+    assert issubclass(Product, Mixin) is True
+    assert issubclass(Mixin, object) is True
+    assert issubclass(BaseProduct, object) is True
